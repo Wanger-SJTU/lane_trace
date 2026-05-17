@@ -1,35 +1,86 @@
-# Lane Moe - Online Swimlane Tool
+# Lane Moe - 在线泳道可视化工具
 
-A web-based swimlane visualization tool similar to distributed tracing tools like Jaeger/Trace. Display timeline spans across horizontal swimlanes with interactive features for managing and manipulating both swimlanes and time spans.
+基于Web的泳道可视化工具，类似于分布式追踪工具（如Jaeger/Trace）。支持在水平泳道中显示时间跨度，提供丰富的交互功能来管理和操作泳道与时间块。
 
-## Features
+## 快速开始
 
-- **Horizontal Swimlanes**: Create custom swimlanes with colors
-- **Interactive Blocks**: Add, move, resize, and edit time blocks
-- **Data Management**:
-  - Auto-save to browser storage (data persists after refresh)
-  - Export to JSON file for backup
-  - Import from JSON file to restore
-  - Clear all data with confirmation
-  - Load demo data
-- **Keyboard Controls**:
-  - W/S: Zoom in/out
-  - A/D: Pan right/left
-  - Ctrl+S: Quick save
-  - Delete: Remove selected block
-  - Escape: Close modal
-- **Mouse Interactions**:
-  - Drag blocks to move them
-  - Drag block edges to resize duration
-  - Click blocks to edit
-  - Double-click to add new blocks
-  - Mouse wheel to pan up/down
-  - Drag background to pan
-- **Customization**:
-  - Color-coded blocks by category
-  - Custom colors and names
-  - Edit duration and start time
-  - Add descriptions
+```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
+```
+
+访问 http://localhost:3000/
+
+## 主要功能
+
+- 📊 **交互式泳道** - 创建自定义泳道和颜色
+- 🎯 **时间块管理** - 添加、拖拽、缩放、编辑时间块
+- 💾 **数据持久化** - 自动保存、导出/导入JSON
+- 🎨 **智能颜色** - 泳道颜色继承、随机颜色分配
+- ⌨️ **键盘控制** - W/S缩放、A/D平移（A=右，D=左）
+- 🖱️ **鼠标交互** - 拖拽、缩放、选择、双击创建
+
+## 键盘快捷键
+
+- `W/S` - 放大/缩小
+- `A/D` - 向右/向左平移
+- `滚轮` - 上下移动
+- `Ctrl+S` - 快速保存
+- `Delete` - 删除选中块
+- `Escape` - 关闭弹窗
+
+## 文档
+
+- [快速开始指南](QUICK_START.md) - 详细的使用说明
+- [测试指南](docs/TESTING.md) - 完整的功能测试清单
+- [JSON格式说明](docs/SAVE_FORMAT.md) - 导入/导出格式
+- [颜色继承](docs/COLOR_INHERITANCE.md) - 颜色系统详解
+- [随机颜色](docs/RANDOM_COLORS.md) - 自动颜色分配
+
+## 示例数据
+
+`examples/` 目录包含示例JSON文件：
+- `example-data.json` - 完整的示例数据
+- `test-random-colors.json` - 测试随机颜色功能
+- `test-color-inheritance.json` - 测试颜色继承
+
+## 技术栈
+
+- **React 18** + TypeScript
+- **Vite** - 构建工具
+- **Zustand** - 状态管理
+- **HTML5 Canvas** - 渲染
+- **TailwindCSS** - 样式
+
+## 开发
+
+```bash
+# 开发模式（支持热更新）
+npm run dev
+
+# 类型检查
+npm run build
+```
+
+## 数据格式
+
+项目使用优化的JSON格式（v2.0）：
+- 泳道包含块数组（层次清晰）
+- 使用 `offset`/`size` 代替 `startTime`/`duration`
+- 智能颜色继承（块默认继承泳道颜色）
+- 支持手动和自动颜色分配
+
+详见 [JSON格式说明](docs/SAVE_FORMAT.md)
+
+## License
+
+MIT
 
 ## Setup
 
