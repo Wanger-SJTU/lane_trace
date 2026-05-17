@@ -1,0 +1,72 @@
+{
+  "version": "2.0",
+  "timestamp": "2025-01-17T12:34:56.789Z",
+  "swimlanes": [
+    {
+      "name": "Frontend",
+      "color": "#3b82f6",
+      "blocks": [
+        {
+          "name": "UI Render",
+          "offset": 0,
+          "size": 500,
+          "description": "Initial page load and render"
+        },
+        {
+          "name": "API Call",
+          "offset": 600,
+          "size": 300,
+          "color": "#8b5cf6",
+          "description": "Fetch user profile data"
+        },
+        {
+          "name": "Update State",
+          "offset": 950,
+          "size": 200
+        }
+      ]
+    },
+    {
+      "name": "API Gateway",
+      "color": "#8b5cf6",
+      "blocks": [
+        {
+          "name": "Route Request",
+          "offset": 650,
+          "size": 100
+        },
+        {
+          "name": "Auth Check",
+          "offset": 780,
+          "size": 150,
+          "color": "#ef4444",
+          "description": "Validate JWT token"
+        }
+      ]
+    },
+    {
+      "name": "User Service",
+      "color": "#ec4899",
+      "blocks": [
+        {
+          "name": "Fetch User",
+          "offset": 950,
+          "size": 400,
+          "description": "Query user from database"
+        }
+      ]
+    },
+    {
+      "name": "Database",
+      "color": "#10b981",
+      "blocks": [
+        {
+          "name": "Execute Query",
+          "offset": 1000,
+          "size": 300,
+          "description": "SELECT * FROM users WHERE id = ?"
+        }
+      ]
+    }
+  ]
+}

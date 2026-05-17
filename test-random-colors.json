@@ -1,0 +1,46 @@
+{
+  "version": "2.0",
+  "timestamp": "2025-01-17T19:45:00.000Z",
+  "swimlanes": [
+    {
+      "name": "Service A",
+      "blocks": [
+        {
+          "name": "Task 1",
+          "offset": 0,
+          "size": 500
+        }
+      ]
+    },
+    {
+      "name": "Service B",
+      "blocks": [
+        {
+          "name": "Task 2",
+          "offset": 200,
+          "size": 600
+        }
+      ]
+    },
+    {
+      "name": "Service C",
+      "blocks": [
+        {
+          "name": "Task 3",
+          "offset": 100,
+          "size": 400
+        }
+      ]
+    },
+    {
+      "name": "Service D",
+      "blocks": [
+        {
+          "name": "Task 4",
+          "offset": 300,
+          "size": 300
+        }
+      ]
+    }
+  ]
+}

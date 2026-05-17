@@ -1,0 +1,34 @@
+{
+  "version": "2.0",
+  "timestamp": "2025-01-17T19:40:00.000Z",
+  "swimlanes": [
+    {
+      "name": "API Service",
+      "color": "#3b82f6",
+      "blocks": [
+        {
+          "name": "Normal Request",
+          "offset": 0,
+          "size": 200
+        },
+        {
+          "name": "Database Query",
+          "offset": 250,
+          "size": 400
+        },
+        {
+          "name": "Slow Query",
+          "offset": 700,
+          "size": 800,
+          "color": "#ef4444",
+          "description": "Performance issue - needs optimization"
+        },
+        {
+          "name": "Cache Hit",
+          "offset": 1600,
+          "size": 100
+        }
+      ]
+    }
+  ]
+}
